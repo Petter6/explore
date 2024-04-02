@@ -1,0 +1,66 @@
+<div class="page text-white page">
+  <div class="title-container">
+    <div class="text">
+      <h1 class="gradient-text text">eXplore</h1>
+    </div>
+  </div>
+  <div class="card-container">
+    <mat-card class="card card-1">
+      <mat-card-header class="header">
+        <mat-card-title>CPI</mat-card-title>
+      </mat-card-header>
+      <div class="img">
+        <img
+          mat-card-image
+          src="../../../assets/seamless-pattern-business-concept-background-wallpaper-finance-or-economics-vector.jpg"
+          alt="Photo of a Shiba Inu"
+          class="img-src"
+        />
+      </div>
+      <mat-card-content>
+        <mat-card-content class="content">
+          <ul>
+            <li>
+              <div *ngIf="easy == 'open'">
+                <a routerLink="/easy"
+                  >Een procentueel deel van een totaal uitrekenen</a
+                >
+              </div>
+              <div *ngIf="easy == 'fin'">
+                <a routerLink="/easy"
+                  >Een procentueel deel van een totaal uitrekenen✅</a
+                >
+              </div>
+            </li>
+
+            <li>
+              <div *ngIf="medium == 'locked'">
+                <a class="disabled" routerLink="/medium"
+                  >Indexcijfers berekenen 🔒</a
+                >
+              </div>
+              <div *ngIf="medium == 'open'">
+                <a routerLink="/medium">Indexcijfers berekenen</a>
+              </div>
+              <div *ngIf="medium == 'fin'">
+                <a routerLink="/medium">Indexcijfers berekenen✅</a>
+              </div>
+            </li>
+
+            <li>
+              <div *ngIf="hard == 'locked'">
+                <a class="disabled" routerLink="/hard">CPI berekenen 🔒</a>
+              </div>
+              <div *ngIf="hard == 'open'">
+                <a routerLink="/hard">CPI berekenen</a>
+              </div>
+              <div *ngIf="hard == 'fin'">
+                <a routerLink="/hard">CPI berekenen✅</a>
+              </div>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

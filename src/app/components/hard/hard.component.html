@@ -1,0 +1,128 @@
+<div class="page">
+  <div class="card-container">
+    <mat-card class="example-card card">
+      <mat-card-header>
+        <mat-card-subtitle class="subtitle"
+          >Vraag {{ this.vraag }}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content class="content">
+        <p>{{ currQuestion.vraag }}</p>
+
+        <mat-table
+          [dataSource]="dataSource"
+          matSort
+          style="background-color: #2d3436"
+        >
+          <!-- Address Column -->
+          <ng-container
+            matColumnDef="Productcategorie"
+            style="color: white; border-top: 0.5px solid white"
+          >
+            <mat-header-cell
+              style="color: white"
+              *matHeaderCellDef
+              mat-sort-header
+            >
+              Productcategorie
+            </mat-header-cell>
+            <mat-cell
+              style="color: white; border-top: 0.5px solid white"
+              *matCellDef="let row"
+            >
+              {{ row[0] }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- Bank ID Column -->
+          <ng-container matColumnDef="Prijs in 2022 (€)">
+            <mat-header-cell
+              style="color: white"
+              *matHeaderCellDef
+              mat-sort-header
+            >
+              Prijs in 2022 (€)
+            </mat-header-cell>
+            <mat-cell
+              style="color: white; border-top: 0.5px solid white"
+              *matCellDef="let row"
+            >
+              {{ row[1] }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Prijs in 2023 (€)">
+            <mat-header-cell
+              style="color: white"
+              *matHeaderCellDef
+              mat-sort-header
+            >
+              Prijs in 2023 (€)
+            </mat-header-cell>
+            <mat-cell
+              style="color: white; border-top: 0.5px solid white"
+              *matCellDef="let row"
+            >
+              {{ row[2] }}
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Wegingsfactor">
+            <mat-header-cell
+              style="color: white"
+              *matHeaderCellDef
+              mat-sort-header
+            >
+              Wegingsfactor
+            </mat-header-cell>
+            <mat-cell
+              style="color: white; border-top: 0.5px solid white"
+              *matCellDef="let row"
+            >
+              {{ row[3] }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- City Column -->
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns"> </mat-row>
+        </mat-table>
+      </mat-card-content>
+    </mat-card>
+    <div class="button-row">
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('a')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.a }}
+      </button>
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('b')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.b }}
+      </button>
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('c')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.c }}
+      </button>
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('d')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.d }}
+      </button>
+    </div>
+  </div>
+</div>

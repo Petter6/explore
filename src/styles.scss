@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: black;}
+
+.mat-mdc-snack-bar-container {
+    --mat-mdc-snack-bar-button-color: #ffffff;
+    --mdc-snackbar-supporting-text-color: #ffffff;
+  
+    &.app-notification-error {
+        --mdc-snackbar-supporting-text-color: red;
+        --mdc-snackbar-container-color: white;
+
+    }
+  
+    &.app-notification-success {
+        --mdc-snackbar-container-color: #20bf6b;
+    }
+  }
+
+  a {
+    text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color:white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: darkgray;
+  }
+  
+  /* selected link */
+  a:active {
+    color: darkgray;
+  }

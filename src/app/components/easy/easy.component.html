@@ -1,0 +1,48 @@
+<div class="page">
+  <div class="card-container">
+    <mat-card class="example-card card">
+      <mat-card-header>
+        <mat-card-subtitle class="subtitle"
+          >Vraag {{ this.vraag }}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content class="content">
+        <p>{{ currQuestion.vraag }}</p>
+      </mat-card-content>
+    </mat-card>
+    <div class="button-row">
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('a')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.a }}
+      </button>
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('b')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.b }}
+      </button>
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('c')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.c }}
+      </button>
+      <button
+        mat-raised-button
+        class="knop"
+        (click)="answer('d')"
+        style="background-color: #2d3436; color: white"
+      >
+        {{ currQuestion.opties.d }}
+      </button>
+    </div>
+  </div>
+</div>
